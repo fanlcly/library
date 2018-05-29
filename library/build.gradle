@@ -30,4 +30,11 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     provided 'com.android.support:support-v4:+'
     compileOnly 'org.jetbrains:annotations-java5:15.0'
+    compileOnly 'com.android.support:recyclerview-v7:26.1.0'
+
+    compileOnly 'com.squareup.retrofit2:retrofit:2.0.2'
+    compileOnly 'com.squareup.retrofit2:converter-gson:2.0.1'
+    compileOnly 'com.squareup.okhttp3:logging-interceptor:3.3.1'
+    compileOnly 'com.squareup.okio:okio:1.8.0'
+    implementation 'com.gyf.barlibrary:barlibrary:2.3.0'
 }

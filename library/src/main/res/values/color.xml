@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+
+
+
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="transparent">#00000000</color>
+    <color name="red">#FF0000</color>
+
+    <color name="divide_c6c6c6">#c6c6c6</color>
+
+    <color name="text_037BFF">#037BFF</color>
+    <color name="text_666">#666</color>
+</resources>

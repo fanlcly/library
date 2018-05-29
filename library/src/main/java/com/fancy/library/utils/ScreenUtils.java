@@ -15,6 +15,10 @@ import android.view.WindowManager;
 public class ScreenUtils {
 
 
+    private ScreenUtils() {
+        throw new UnsupportedOperationException("no instantiate");
+    }
+
     /**
      * 获得屏幕高度
      *
