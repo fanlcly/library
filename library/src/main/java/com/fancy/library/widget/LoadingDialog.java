@@ -18,7 +18,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * file explain
+ * 网络加载对话框
  *
  * @author fanlei
  * @version 1.0 2018\5\30 0030

@@ -15,4 +15,14 @@
     </style>
 
 
+
+    <!--底部弹出Dialog动画-->
+    <style name="BottomDialog" parent="MyDialog">
+        <item name="@android:windowEnterAnimation">@anim/dialog_bottom_in</item>
+        <item name="@android:windowExitAnimation">@anim/dialog_bottom_out</item>
+    </style>
+
+
+
+
 </resources>

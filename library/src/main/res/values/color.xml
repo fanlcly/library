@@ -12,6 +12,7 @@
 
     <color name="text_037BFF">#037BFF</color>
     <color name="text_666">#666</color>
+    <color name="text_333">#333</color>
 
     <color name="bg_default_img">#eee</color>
     <color name="divider_common">#ddd</color>

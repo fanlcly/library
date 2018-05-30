@@ -5,7 +5,7 @@ import android.util.SparseIntArray;
 
 import java.util.List;
 
-import static com.chad.library.adapter.base.BaseMultiItemQuickAdapter.TYPE_NOT_FOUND;
+import static com.fancy.library.recyclerviewhelper.base.BaseMultiItemQuickAdapter.TYPE_NOT_FOUND;
 
 /**
  * help you to achieve multi type easily

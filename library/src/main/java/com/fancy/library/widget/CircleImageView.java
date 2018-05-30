@@ -17,7 +17,12 @@ import android.widget.ImageView;
 
 import com.fancy.library.R;
 
-
+/**
+ * 圆形的imageview
+ * @author
+ * @version 1.0 2018\5\29 0029
+ * @since JDK 1.7
+ */
 @SuppressWarnings("ALL")
 public class CircleImageView extends ImageView {
 

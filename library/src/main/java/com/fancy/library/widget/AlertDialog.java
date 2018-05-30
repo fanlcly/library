@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
+import android.widget.FrameLayout;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -65,7 +66,7 @@ public class AlertDialog {
         dialog = new Dialog(context, R.style.MyDialog);
         dialog.setContentView(view);
         // 调整dialog背景大小
-        lLayout_bg.setLayoutParams(new LinearLayout.LayoutParams((int) (dm.widthPixels* 0.8), LinearLayout.LayoutParams.WRAP_CONTENT));
+        lLayout_bg.setLayoutParams(new FrameLayout.LayoutParams((int) (dm.widthPixels* 0.8), FrameLayout.LayoutParams.WRAP_CONTENT));
 
         return this;
     }

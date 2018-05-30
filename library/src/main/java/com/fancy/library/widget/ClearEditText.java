@@ -14,8 +14,11 @@ import com.fancy.library.R;
 
 
 /**
- * Created by chenwenfa on 2016/8/2.
- * Desc:清除editText
+ * 带删除按钮的editText
+ *
+ * @author fanlei
+ * @version 1.0 2018\5\30 0030
+ * @since JDK 1.7
  */
 @SuppressWarnings("ALL")
 public class ClearEditText extends EditText implements View.OnFocusChangeListener,

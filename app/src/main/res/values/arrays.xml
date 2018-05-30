@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string-array name="dates">
+        <item>超人会飞</item>
+        <item>半岛铁盒</item>
+        <item>暗号</item>
+        <item>开不了口</item>
+        <item>梯田</item>
+        <item>分裂</item>
+        <item>回到过去</item>
+    </string-array>
+
+
+
+
+</resources>

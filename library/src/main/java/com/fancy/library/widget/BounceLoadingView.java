@@ -21,8 +21,10 @@ import android.view.animation.AccelerateDecelerateInterpolator;
 import java.util.ArrayList;
 
 /**
+ * 加载弹窗的动画类
  * @author deadline
- * @time 2016/9/26
+ * @version 1.0 2018\5\29 0029
+ * @since JDK 1.7
  */
 public class BounceLoadingView extends View {
 
