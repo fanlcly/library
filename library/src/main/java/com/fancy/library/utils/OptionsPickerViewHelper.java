@@ -8,6 +8,7 @@ import android.widget.Toast;
 import com.bigkoo.pickerview.builder.OptionsPickerBuilder;
 import com.bigkoo.pickerview.listener.OnOptionsSelectListener;
 import com.bigkoo.pickerview.view.OptionsPickerView;
+import com.contrarywind.interfaces.IPickerViewData;
 
 import java.util.List;
 
@@ -28,7 +29,7 @@ public class OptionsPickerViewHelper {
      * @param data
      * @param view
      */
-    public static <T> void showWheelView(final Context context, final List<T> data, final TextView view) {
+    public  static <T> void showWheelView(final Context context, final List<T> data, final TextView view) {
         OptionsPickerView pvOptions = new OptionsPickerBuilder(context, new OnOptionsSelectListener() {
             @Override
             public void onOptionsSelect(int options1, int option2, int options3, View v) {

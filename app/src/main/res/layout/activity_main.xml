@@ -37,6 +37,11 @@
                 style="@style/btn"
                 android:text="滚轮单选框" />
 
+            <Button
+                android:id="@+id/btn5"
+                style="@style/btn"
+                android:text="网络请求" />
+
         </LinearLayout>
     </ScrollView>
 

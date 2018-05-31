@@ -8,6 +8,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.fancy.library.impl.OnItemClickListener;
+import com.fancy.library.net.RetrofitClient;
+import com.fancy.library.net.impl.Iinterceptor;
+import com.fancy.library.net.impl.InterceptorInterface;
 import com.fancy.library.utils.OptionsPickerViewHelper;
 import com.fancy.library.widget.AlertDialog;
 import com.fancy.library.widget.LoadingDialog;
@@ -59,11 +62,15 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        findViewById(R.id.btn4).setOnClickListener(new View.OnClickListener() {
+        findViewById(R.id.btn5).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                List<String> data =  Arrays.asList(getResources().getStringArray(R.array.dates));
-                OptionsPickerViewHelper.showWheelView(MainActivity.this,data, (TextView) findViewById(R.id.btn4));
+                RetrofitClient.getInstance("www.sanxiachuanggu.com/servant/pub/index", new InterceptorInterface() {
+                    @Override
+                    public Iinterceptor getInterceptor() {
+                        return null;
+                    }
+                },BuildConfig.DEBUG);
             }
         });
     }
