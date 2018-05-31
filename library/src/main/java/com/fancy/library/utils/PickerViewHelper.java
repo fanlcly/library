@@ -12,7 +12,7 @@ import com.fancy.library.R;
 import java.util.Calendar;
 
 /**
- * file explain
+ * 日期滚轮的帮助类
  *
  * @author fanlei
  * @version 1.0 2018\5\30 0030

@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.fancy.library.R;
+import com.fancy.library.utils.ToastUtils;
 import com.gyf.barlibrary.ImmersionBar;
 
 /**
@@ -24,11 +25,10 @@ public abstract class BaseFragment extends Fragment {
 
 
     protected Activity mActivity;
-
     protected Context mApplicationContext;
-
     protected View mRootView;
     public ImmersionBar mImmersionBar;
+    private ToastUtils mToast;
 
     @Nullable
     @Override
@@ -51,6 +51,7 @@ public abstract class BaseFragment extends Fragment {
         initData();
         initView();
         setListener();
+        mToast = ToastUtils.getInstance(mActivity);
     }
 
     @Override
@@ -59,6 +60,8 @@ public abstract class BaseFragment extends Fragment {
         if (mImmersionBar != null) {
             mImmersionBar.destroy();
         }
+
+        mToast.destory();
     }
 
     @Override
@@ -71,6 +74,7 @@ public abstract class BaseFragment extends Fragment {
 
     /**
      * 布局
+     *
      * @return
      */
     protected abstract int setLayoutId();

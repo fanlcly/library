@@ -4,11 +4,11 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
 import android.view.MotionEvent;
 
 import com.fancy.library.R;
 import com.fancy.library.utils.AppManager;
+import com.fancy.library.utils.ToastUtils;
 import com.gyf.barlibrary.ImmersionBar;
 
 /**
@@ -22,21 +22,14 @@ public abstract class BaseActivity extends Activity {
 
     protected Context mApplicationContext;
     protected Activity mActivity;
-    protected String TAG_LOG;
-    protected int mScreenWidth;
-    protected int mScreenHeight;
     protected static boolean isAppForeground;
     public ImmersionBar mImmersionBar;
+    public ToastUtils mToast;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.mApplicationContext = this.getApplicationContext();
         this.mActivity = this;
-        this.TAG_LOG = this.getClass().getSimpleName();
-        DisplayMetrics metric = new DisplayMetrics();
-        this.getWindowManager().getDefaultDisplay().getMetrics(metric);
-        this.mScreenWidth = metric.widthPixels;
-        this.mScreenHeight = metric.heightPixels;
         this.setContentView(this.setLayoutView());
         AppManager.getAppManager().addActivity(this);
         this.initView();
@@ -44,7 +37,7 @@ public abstract class BaseActivity extends Activity {
         this.initListen();
         //初始化沉浸式
         initImmersionBar();
-
+        mToast = ToastUtils.getInstance(mActivity);
     }
 
 
@@ -80,6 +73,7 @@ public abstract class BaseActivity extends Activity {
             mImmersionBar.destroy();
         }
         AppManager.getAppManager().finishActivity(this);
+        mToast.destory();
     }
 
     protected void onResume() {
