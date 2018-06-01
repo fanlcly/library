@@ -4,6 +4,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.graphics.Color;
 import android.view.Gravity;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.Window;
@@ -51,7 +52,7 @@ public class LoadingDialog {
     @SuppressWarnings("deprecation")
 
     public LoadingDialog(Context context) {
-        this(context,getBitMapIds());
+        this(context, getBitMapIds());
     }
 
     private static List<Integer> getBitMapIds() {
@@ -64,9 +65,9 @@ public class LoadingDialog {
     }
 
 
-    public LoadingDialog(Context context,List<Integer> bitMapIds) {
+    public LoadingDialog(Context context, List<Integer> bitMapIds) {
         this.context = context;
-        View view = View.inflate(context, R.layout.base_loading_view, null);
+        View view = LayoutInflater.from(context).inflate(R.layout.base_loading_view, null, Boolean.FALSE);
         loadingView = view.findViewById(R.id.loadingView);
 
         for (int i = 0; i < bitMapIds.size(); i++) {
