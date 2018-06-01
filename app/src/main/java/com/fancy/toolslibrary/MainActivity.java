@@ -49,22 +49,22 @@ public class MainActivity extends BaseActivity {
         findViewById(R.id.btn2).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final LoadingDialog dialog  = new LoadingDialog(mActivity);
+                final LoadingDialog dialog = new LoadingDialog(mActivity);
                 dialog.show();
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
                         dialog.dismiss();
                     }
-                },5000);
+                }, 5000);
             }
         });
 
         findViewById(R.id.btn3).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                List<String> data =  Arrays.asList(getResources().getStringArray(R.array.dates));
-                SingleSelectorController<String> controller = new SingleSelectorController<>(mActivity,data,"");
+                List<String> data = Arrays.asList(getResources().getStringArray(R.array.dates));
+                SingleSelectorController<String> controller = new SingleSelectorController<>(mActivity, data, "");
                 controller.show();
                 controller.setOnItemClickListener(new OnItemClickListener<String>() {
                     @Override
@@ -78,22 +78,22 @@ public class MainActivity extends BaseActivity {
         findViewById(R.id.btn4).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                List<String> data =  Arrays.asList(getResources().getStringArray(R.array.dates));
-                OptionsPickerViewHelper.showWheelView(mActivity,data, (TextView) findViewById(R.id.btn4));
+                List<String> data = Arrays.asList(getResources().getStringArray(R.array.dates));
+                OptionsPickerViewHelper.showWheelView(mActivity, data, (TextView) findViewById(R.id.btn4));
             }
         });
 
         findViewById(R.id.btn5).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Retrofit retrofit =  RetrofitClient.getInstance("http://www.sanxiachuanggu.com"
+                Retrofit retrofit = RetrofitClient.getInstance("http://www.sanxiachuanggu.com"
                         , new InterceptorInterface() {
                             @Override
                             public Iinterceptor getInterceptor() {
                                 return new TokenInterceptor();
                             }
                         }
-                        ,BuildConfig.DEBUG);
+                        , BuildConfig.DEBUG);
 
                 final Api service = retrofit.create(Api.class);
                 //配置参数
@@ -107,7 +107,7 @@ public class MainActivity extends BaseActivity {
                                  }
 
                                  @Override
-                                 public void onFail(String message, int code) {
+                                 public void onFail(Response<HomeDataEntity> response, String message, int failCode) {
 
                                  }
                              }

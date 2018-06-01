@@ -21,12 +21,13 @@ public class MyCallBack<T> extends BaseCallBack<T> {
     }
 
     @Override
-    public void onSuc(Response response) {
+    public void onFail(Response<T> response, String message, int failCode) {
 
     }
 
     @Override
-    public void onFail(String message, int failCode) {
+    public void onSuc(Response response) {
 
     }
+
 }
