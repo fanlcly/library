@@ -32,7 +32,7 @@ public class ToastUtils {
      * @param toastMsg
      */
     public void show(int toastMsg) {
-        mToast.setText(toastMsg);
+        mToast.setText(String.valueOf(toastMsg));
         mToast.show();
     }
 

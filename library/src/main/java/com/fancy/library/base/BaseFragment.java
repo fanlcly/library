@@ -28,7 +28,7 @@ public abstract class BaseFragment extends Fragment {
     protected Context mApplicationContext;
     protected View mRootView;
     public ImmersionBar mImmersionBar;
-    private ToastUtils mToast;
+    protected ToastUtils mToast;
 
     @Nullable
     @Override
