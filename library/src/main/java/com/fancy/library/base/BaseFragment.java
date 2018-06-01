@@ -47,10 +47,10 @@ public abstract class BaseFragment extends Fragment {
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        initImmersionBar();
-        initData();
         initView();
+        initData();
         setListener();
+        initImmersionBar();
         mToast = ToastUtils.getInstance(mActivity);
     }
 
