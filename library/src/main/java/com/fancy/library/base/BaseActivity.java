@@ -47,9 +47,17 @@ public abstract class BaseActivity extends Activity {
                     .fitsSystemWindows(true)  //使用该属性,必须指定状态栏颜色
                     .statusBarColor(R.color.colorPrimary);
         } else {
-            mImmersionBar = ImmersionBar.with(this)
-                    .fitsSystemWindows(true)  //使用该属性,必须指定状态栏颜色
-                    .statusBarColor(setStatusBarColor());
+            if (setStatusBarColor() == R.color.white) {
+                mImmersionBar = ImmersionBar.with(this)
+                        .fitsSystemWindows(true)  //使用该属性,必须指定状态栏颜色
+                        .statusBarDarkFont(true)   //状态栏字体是深色，不写默认为亮色
+                        .statusBarColor(setStatusBarColor());
+            } else {
+                mImmersionBar = ImmersionBar.with(this)
+                        .fitsSystemWindows(true)  //使用该属性,必须指定状态栏颜色
+                        .statusBarColor(setStatusBarColor());
+            }
+
         }
         mImmersionBar.init();
     }
