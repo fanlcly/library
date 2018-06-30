@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!--普通dialog样式-->
     <style name="MyDialog" parent="@android:style/Theme.Dialog">
@@ -11,15 +11,16 @@
     <!--透明dialog样式-->
     <style name="TransDialog" parent="@android:style/Theme.Dialog">
         <item name="android:windowBackground">@color/transparent</item><!--背景透明，没毛边-->
-        <item name="android:backgroundDimEnabled">false</item><!--不允许背景变暗-->
+        <item name="android:backgroundDimEnabled" tools:ignore="NewApi">false</item><!--不允许背景变暗-->
     </style>
 
 
 
     <!--底部弹出Dialog动画-->
-    <style name="BottomDialog" parent="MyDialog">
+    <style name="BottomDialog" parent="@android:style/Theme.Dialog">
         <item name="@android:windowEnterAnimation">@anim/dialog_bottom_in</item>
         <item name="@android:windowExitAnimation">@anim/dialog_bottom_out</item>
+        <item name="android:windowBackground">@android:color/transparent</item><!--背景透明，没毛边-->
     </style>
 
 

@@ -119,6 +119,22 @@ public class AppManager {
 
     }
 
+
+    /**
+     * 结束除了主页的所有activity
+     */
+    public void finishAllActivityExceptActivity(Class<?> cls) {
+        for (int i = 0, size = activityStack.size(); i < size; i++) {
+            if (null != activityStack.get(i)) {
+                if (!activityStack.get(i).getClass().equals(cls)) {
+                    activityStack.get(i).finish();
+                }
+            }
+        }
+
+        activityStack.clear();
+    }
+
     /**
      * 结束所有Activity
      */

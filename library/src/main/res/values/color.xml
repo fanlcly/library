@@ -18,5 +18,5 @@
     <color name="divider_common">#ddd</color>
     <color name="bg_common">#f1f1f1</color>
 
-
+    <color name="bg_trans_10">#19000000</color> <!--黑色10%透明度-->
 </resources>

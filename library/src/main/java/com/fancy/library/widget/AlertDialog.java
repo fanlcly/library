@@ -51,7 +51,7 @@ public class AlertDialog {
 
         // 获取自定义Dialog布局中的控件
         lLayout_bg = view.findViewById(R.id.lLayout_bg);
-        txt_title =  view.findViewById(R.id.txt_title);
+        txt_title = view.findViewById(R.id.txt_title);
         txt_title.setVisibility(View.GONE);
         txt_msg = view.findViewById(R.id.txt_msg);
         txt_msg.setVisibility(View.GONE);
@@ -66,7 +66,7 @@ public class AlertDialog {
         dialog = new Dialog(context, R.style.MyDialog);
         dialog.setContentView(view);
         // 调整dialog背景大小
-        lLayout_bg.setLayoutParams(new FrameLayout.LayoutParams((int) (dm.widthPixels* 0.8), FrameLayout.LayoutParams.WRAP_CONTENT));
+        lLayout_bg.setLayoutParams(new FrameLayout.LayoutParams((int) (dm.widthPixels * 0.8), FrameLayout.LayoutParams.WRAP_CONTENT));
 
         return this;
     }
@@ -103,7 +103,9 @@ public class AlertDialog {
         btn_pos.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                listener.onClick(v);
+                if (listener != null) {
+                    listener.onClick(v);
+                }
                 dialog.dismiss();
             }
         });
@@ -121,7 +123,9 @@ public class AlertDialog {
         btn_neg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                listener.onClick(v);
+                if (listener != null) {
+                    listener.onClick(v);
+                }
                 dialog.dismiss();
             }
         });
@@ -132,7 +136,6 @@ public class AlertDialog {
         dialog.setCanceledOnTouchOutside(cancel);
         return this;
     }
-
 
 
     private void setLayout() {

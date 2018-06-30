@@ -9,6 +9,7 @@
         android:id="@+id/loadingView"
         android:layout_width="50dp"
         android:layout_height="wrap_content"
+        android:background="@color/bg_trans_10"
         android:layout_centerInParent="true" />
 
 </LinearLayout>
