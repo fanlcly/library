@@ -47,8 +47,8 @@ public class RetrofitClient {
 
         OkHttpClient client = new OkHttpClient.Builder()
                 .addInterceptor(mLoggingInterceptor)
-                .retryOnConnectionFailure(Boolean.FALSE)            // 失败时重新连接
-                .connectTimeout(10, TimeUnit.SECONDS)               // 超时时间是15秒
+                .retryOnConnectionFailure(Boolean.TRUE)            // 失败时重新连接
+                .connectTimeout(15, TimeUnit.SECONDS)               // 超时时间是15秒
                 .addNetworkInterceptor(mInterceptor)           // token interceptor
                 .build();
 
