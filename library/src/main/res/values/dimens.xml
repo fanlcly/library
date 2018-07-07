@@ -10,4 +10,6 @@
     <dimen name="sp_12">12sp</dimen>
     <dimen name="sp_14">14sp</dimen>
     <dimen name="sp_16">16sp</dimen>
+
+    <dimen name="default_circle_view_size">200dp</dimen>
 </resources>

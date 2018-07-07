@@ -2,7 +2,6 @@ package com.fancy.library.widget;
 
 import android.app.Dialog;
 import android.content.Context;
-import android.graphics.Color;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -47,7 +46,7 @@ public class LoadingDialog {
     private TextView textView;
 
     private Context context;
-    private final BounceLoadingView loadingView;
+    private final CircleProgress loadingView;
 
     @SuppressWarnings("deprecation")
 
@@ -70,12 +69,7 @@ public class LoadingDialog {
         View view = LayoutInflater.from(context).inflate(R.layout.base_loading_view, null, Boolean.FALSE);
         loadingView = view.findViewById(R.id.loadingView);
 
-        for (int i = 0; i < bitMapIds.size(); i++) {
-            loadingView.addBitmap(bitMapIds.get(i));
-        }
-
-        loadingView.setShadowColor(Color.LTGRAY);
-        loadingView.setDuration(700);
+        loadingView.setDuration(1500);
 
         d = new Dialog(context, R.style.TransDialog);// 加入样式
         d.setCanceledOnTouchOutside(false);
@@ -87,14 +81,14 @@ public class LoadingDialog {
     }
 
     public void show() {
-        loadingView.start();
+        loadingView.startAnim();
         if (null != d && !d.isShowing()) {
             d.show();
         }
     }
 
     public void show(String content) {
-        loadingView.start();
+        loadingView.startAnim();
         if (null != d && !d.isShowing()) {
             textView.setText(content);
             d.show();
@@ -102,7 +96,7 @@ public class LoadingDialog {
     }
 
     public void dismiss() {
-        loadingView.stop();
+        loadingView.stopAnim();
         if (d != null) {
             d.dismiss();
         }

@@ -3,13 +3,13 @@
 
 
     <declare-styleable name="CustomErrorView">
-        <attr name="error_src" format="reference"/>
+        <attr name="error_src" format="reference" />
         <attr name="error_text" format="string" />
-        <attr name="btn_text" format="string"/>
+        <attr name="btn_text" format="string" />
     </declare-styleable>
 
     <declare-styleable name="CustomEmptyView">
-        <attr name="src" format="reference"/>
+        <attr name="src" format="reference" />
         <attr name="text" format="string" />
     </declare-styleable>
 
@@ -20,6 +20,9 @@
     </declare-styleable>
 
 
-
-
+    <declare-styleable name="CircleProgress">
+        <attr name="color1" format="reference|color" />
+        <attr name="color2" format="reference|color" />
+        <attr name="color3" format="reference|color" />
+    </declare-styleable>
 </resources>
