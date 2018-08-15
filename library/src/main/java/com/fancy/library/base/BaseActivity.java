@@ -25,7 +25,7 @@ public abstract class BaseActivity extends Activity {
     protected static boolean isAppForeground;
     public ImmersionBar mImmersionBar;
     public ToastUtils mToast;
-    private Bundle savedInstanceState;
+    protected Bundle savedInstanceState;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
