@@ -25,5 +25,4 @@ public class SingleAdapter<T> extends BaseQuickAdapter<T, BaseViewHolder> {
     protected void convert(BaseViewHolder helper, T item) {
         helper.setText(R.id.text_view, item.toString());
     }
-
 }

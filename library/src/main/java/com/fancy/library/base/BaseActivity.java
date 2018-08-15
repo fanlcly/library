@@ -25,9 +25,11 @@ public abstract class BaseActivity extends Activity {
     protected static boolean isAppForeground;
     public ImmersionBar mImmersionBar;
     public ToastUtils mToast;
+    private Bundle savedInstanceState;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        this.savedInstanceState = savedInstanceState;
         this.mApplicationContext = this.getApplicationContext();
         this.mActivity = this;
         this.setContentView(this.setLayoutView());

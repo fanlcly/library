@@ -115,7 +115,7 @@ public class ClearEditText extends EditText implements View.OnFocusChangeListene
         } else {
             setClearIconVisible(false);
         }
-        // FIXME: 2016/11/7   外部如果重写onfouschange事件   会被出入新对象覆盖   自定义接口将结果返回 rambo
+
         if (onCustomTextFocusChange != null) {
             onCustomTextFocusChange.OnCustomFocusChange(hasFoucs);
         }
