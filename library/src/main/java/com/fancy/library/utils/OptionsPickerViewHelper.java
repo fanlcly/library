@@ -36,7 +36,6 @@ public class OptionsPickerViewHelper {
                 //返回的分别是三个级别的选中位置
                 String tx = data.get(options1).toString();
                 view.setText(tx);
-                Toast.makeText(context, tx, Toast.LENGTH_SHORT).show();
             }
         })
                 .setSubmitText("确定")//确定按钮文字
